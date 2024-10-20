@@ -1,0 +1,27 @@
+:root{}
+
+#leftNav{
+    border-radius: 200px;
+}
+.navIcon{
+    width: 40px;
+}
+
+.content{
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+.headSub{
+    font-style: italic;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.headSub2{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.head{
+    margin-top: 40px;
+    font-size: 100px;
+}

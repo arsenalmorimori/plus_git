@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --black: rgb(35, 35, 35);
+    --white: rgb(255, 255, 255);
+}
+@font-face {
+    font-family: Square;
+    src: url(../src/asset/Squarea\ Expanded\ Oblique.ttf);
+}
+@font-face {
+    font-family: Michroma;
+    src: url(../src/asset/Michroma-Regular.ttf);
+}
+
+.as {
+    height: 85vh;
+  }
+
+
+
+/* BACKGROUND COLOR */
+.bgColor1{
+    background-color: var(--black);
+}
+
+/* FONT SIZE */
+.textSizeSM{
+    font-size: small;
+}
+.textSizeSM{
+    font-size: small;
+}
+
+/* FONT COLOR */
+.textColorWhite{
+    color:var(--white);
+}
+
+/* FONT STYLE */
+.fontStyle1{
+    font-family: "Square";
+}
+.fontStyle2{
+    font-family: "Michroma";
+}

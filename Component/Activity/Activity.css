@@ -1,0 +1,385 @@
+:root{
+    --black:#3c3c3c;
+    --bg:#f5feff;
+}
+:root {
+    --black: #3a3a3a;
+    --bg: #fafafa;
+    --white: #ffffff;
+    --navUn: #c2c2c2;
+    --navH: #000000;
+    --navHov: #838383;
+}
+
+@font-face {
+    font-family: "Michroma";
+    src: url(../../src/asset/Michroma-Regular.ttf);
+}
+@font-face {
+    font-family: "Square";
+    src: url(../../src/asset/SquareaExpandedOblique.ttf);
+}
+
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--bg);
+}
+
+.bodyCon{
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1.2fr 1fr;
+    grid-template-columns: 130px 1.5fr 1fr;
+}
+
+
+
+
+/* ------------ LEFT ------------------- */
+.leftNav {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    grid-row: 1/10;
+    grid-column: 1/2;
+    margin: 50px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--black);
+}
+
+.leftNav img {
+    width: 40px;
+    margin: 25px;
+    transition: 0.5s;
+}
+.leftNav img:hover{
+    width: 45px;
+}
+
+
+
+
+
+
+/* -------------- NAV -------------- */
+.upperNav {
+    grid-row: 1/2;
+    grid-column: 2/10;
+    margin: 10px;
+    margin-right: 35px;
+    color: var(--black);
+    background-color: var(--bg);
+    display: flex; 
+    justify-content: flex-start; 
+    padding: 20px 10px; 
+}
+
+.navCon{
+    position: absolute;
+    right: 60px;
+}
+
+.upperNav a{
+    text-align: right;
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--navUn);
+    font-size: 13px;
+    font-family: 'Michroma';
+    transition: 0.5s;
+}
+
+#n3{
+    color: var(--navH);
+}
+#n2:hover ,#n1:hover ,#n4:hover {
+    font-size: 13px;
+    color: var(--navHov);
+}
+
+
+
+
+
+
+.rightPanel{
+    grid-row: 2/3;
+    grid-column: 3/10;
+    margin: 10px;
+    margin-right: 30px;
+    padding-left: 40px;
+}
+
+
+
+/* -------- LEFT UP ------------- */
+.leftUpPanel{
+    grid-row: 2/3;
+    grid-column: 2/2;
+    margin: 10px;
+    /* TEMP */
+    color: white;
+    background-color: var(--bg);
+}
+.leftUpPanel h2{
+    padding-left: 30px;
+    font-family: 'Square';
+    font-weight: 100;
+    margin-top: 0px;
+    font-size: 90px;
+    color: var(--black);
+    margin-bottom: 0px;
+    line-height: 0.8;
+}
+.leftUpPanel p{
+    padding-left: 30px;
+    font-family: 'michroma';
+    font-weight: 100;
+    margin-top: 30px;
+    font-size: 15px;
+    
+    padding-right: 130px;
+    color: var(--black);
+    margin-bottom: -15px;
+}
+
+
+
+/* -------- ACTIVITY --------- */
+.activity{
+    grid-row: 3/4;
+    grid-column: 2/4;
+    margin: 10px;
+    margin-right: 30px;
+    /* DISPLAY */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.activity h2{
+    padding-left: 30px;
+    font-family: 'Square';
+    font-weight: 100;
+    margin-top: 0px;
+    font-size: 60px;
+    color: var(--black);
+    margin-bottom: 0px;
+}
+.activity a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "michroma";
+    color: var(--white);
+    border: none;
+}
+.activity button{
+    clip-path: polygon(13.6% 0%, 100.4% 2%, 100% 18%, 100.4% 73%, 88.8% 101%, 0% 101%, 0% 82%, 0% 27%);
+    width: 220px;
+     height: 80px;
+     border: none;
+     background-color: var(--black);
+}
+.activity1{
+    grid-row: 1;
+    grid-column: 1/2;
+    margin: 10px;
+}
+.activity2{
+    grid-row: 1;
+    grid-column: 2/3;
+    margin: 10px;
+}
+.activity3{
+    grid-row: 1;
+    grid-column: 3/4;
+    margin: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+    .bodyCon{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 100px 2fr 2fr;
+        grid-template-columns: 0px 2fr 1fr;
+    }
+    
+    .leftNav{
+        display: none;
+    }
+    .upperNav{
+        grid-row: 1/2;
+        grid-column: 2/10;
+        margin: 10px;
+    }
+    .rightPanel{
+        grid-row: 2/3;
+        grid-column: 3/10;
+        margin: 10px;
+    }
+    .leftUpPanel{
+        grid-row: 2/3;
+        grid-column: 2/2;
+        margin: 10px;
+    }
+    .leftUpPanel h2{
+        font-size: 60px;
+    }
+     .leftUpPanel p{
+        font-size: 12px;
+    }
+    .leftDownPanel{
+        grid-row: 3/4;
+        grid-column: 2/2;
+        margin: 10px;
+        margin-bottom: 50px;
+    }
+    
+}
+
+@media screen and (max-width:687px) {
+    .bodyCon{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 80px 260px 300px 330px;
+        grid-template-columns: 0px 2fr 1fr;
+    }
+    
+    .leftNav{
+        display: none;
+    }
+    .upperNav{
+        grid-row: 1/2;
+        grid-column: 2/10;
+        margin: 10px;
+    }
+    .rightPanel{
+        display: none;
+    }
+    .leftUpPanel{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+    .leftDownPanel{
+        grid-row: 3/4;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+    .leftUpPanel h2{
+        font-size: 50px;
+    }
+     .leftUpPanel p{
+        font-size: 10px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:638px) {
+    .bodyCon{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 80px 260px 300px 330px;
+        grid-template-columns: 0px 2fr 1fr;
+    }
+    
+    .leftNav{
+        display: none;
+    }
+    .upperNav{
+        grid-row: 1/2;
+        grid-column: 2/10;
+        margin: 10px;
+    }
+    .rightPanel{
+        display: none;
+    }
+    .leftUpPanel{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+    .leftDownPanel{
+        grid-row: 3/4;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+    .activity{
+        margin-right: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width:570px) {
+    .bodyCon{
+        width: 100vw;
+        height: 180vh;
+        display: grid;
+        grid-template-rows: 80px 260px 300px 330px;
+        grid-template-columns: 0px 1fr;
+    }
+    
+    .leftNav{
+        display: none;
+    }
+    .upperNav{
+        grid-row: 1/2;
+        grid-column: 2/10;
+        margin: 10px;
+    }
+    .rightPanel{
+        display: none;
+    }
+    .leftUpPanel{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+    .leftDownPanel{
+        grid-row: 3/4;
+        grid-column: 2/4;
+        margin: 10px;
+    }
+
+
+    .activity{
+        margin: 10px;
+        margin-right: 10px;
+        height: 120vh;
+        /* DISPLAY */
+        display: grid;
+        grid-template-rows: 5fr 5fr 5fr;
+        grid-template-columns:  1fr
+    }
+    .activity1{
+        grid-row: 1;
+        grid-column: 1/2;
+        margin: 10px;
+    }
+    .activity2{
+        grid-row: 2;
+        grid-column: 1/2;
+        margin: 10px;
+    }
+    .activity3{
+        grid-row: 3;
+        grid-column: 1/2;
+        margin: 10px;
+    }
+    
+    
+}

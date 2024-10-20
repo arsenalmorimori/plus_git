@@ -1,0 +1,403 @@
+:root {
+    --black: #3a3a3a;
+    --bg: #fafafa;
+    --white: #ffffff;
+    --navUn: #c2c2c2;
+    --navH: #000000;
+    --navHov: #838383;
+}
+
+@font-face {
+    font-family: "Michroma";
+    src: url(../../src/asset/Michroma-Regular.ttf);
+}
+@font-face {
+    font-family: "Square";
+    src: url(../../src/asset/SquareaExpandedOblique.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.bodyCon {
+    background-color: var(--bg);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-columns: 130px 2fr 1fr;
+}
+
+
+
+
+
+/* ------------ LEFT ------------------- */
+.leftNav {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    grid-row: 1/10;
+    grid-column: 1/2;
+    margin: 50px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--black);
+}
+
+.leftNav img {
+    width: 40px;
+    margin: 25px;
+    transition: 0.5s;
+}
+.leftNav img:hover{
+    width: 45px;
+}
+
+
+
+
+
+/* -------------- NAV -------------- */
+.upperNav {
+    grid-row: 1/2;
+    grid-column: 2/10;
+    margin: 10px;
+    margin-right: 35px;
+    color: var(--black);
+    background-color: var(--bg);
+    display: flex; 
+    justify-content: flex-start; 
+    padding: 20px 10px; 
+}
+
+.navCon{
+    position: absolute;
+    right: 60px;
+}
+
+.upperNav a{
+    text-align: right;
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--navUn);
+    font-size: 13px;
+    font-family: 'Michroma';
+    transition: 0.5s;
+}
+
+#n1{
+    color: var(--navH);
+}
+#n2:hover ,#n3:hover ,#n4:hover {
+    font-size: 13px;
+    color: var(--navHov);
+}
+
+
+
+
+
+/* --------------- LEFT UP ------------ */
+.leftUpPanel {
+    grid-row: 2/3;
+    grid-column: 2/2;
+    margin: 10px;
+    padding: 20px; 
+    color: var(--black);
+    background-color: var(--bg);
+}
+.leftUpPanel h1{
+    padding-left: 30px;
+    font-family: 'Square';
+    font-weight: 100;
+    margin-top: -30px;
+    font-size: 25px;
+    color: var(--black);
+    margin-bottom: -15px;
+}
+.leftUpPanel h2{
+    padding-left: 30px;
+    font-family: 'Square';
+    font-weight: 100;
+    margin-top: 0px;
+    font-size: 90px;
+    color: var(--black);
+    margin-bottom: 0px;
+}
+.leftUpPanel p{
+    padding-left: 30px;
+    font-family: 'michroma';
+    font-weight: 100;
+    margin-top: 0px;
+    font-size: 15px;
+    
+    padding-right: 130px;
+    color: var(--black);
+    margin-bottom: -15px;
+}
+.leftUpPanel img{
+    width: 130px;
+    margin-left: 350px;
+}
+@media screen and (max-width: 1390px) {
+    .leftUpPanel img{
+        display: none;
+    }
+}
+.leftDownPanel {
+    grid-row: 3/4;
+    grid-column: 2/2;
+    margin-left: 61px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 51px;
+    color: white;
+    background-color: var(--white);
+    clip-path: polygon(50px 0px, calc(100% - 6px) 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px calc(100% - 1px), 0px 50px);
+    display: grid; 
+    gap: 10px; 
+    align-items: center;
+    justify-items: start; 
+    padding: 20px; 
+}
+
+.leftDownPanelOutline{
+    grid-row: 3/4;
+    grid-column: 2/2;
+    margin-left: 60px;
+    margin-top: 8.5px;
+    margin-right: 8.5px;
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+    background: var(--black);
+    clip-path: polygon(50px 0px, calc(100% - 6px) 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px calc(100% - 1px), 0px 50px);
+    overflow: hidden;
+}
+
+
+.leftDownPanel h1 {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-left: 25px;
+    font-family: 'square';
+    color: var(--black);
+    font-weight: lighter; 
+    margin-bottom: 10px; 
+}.leftDownPanel h2 {
+    font-size: 20px;
+    margin-top: -40px;
+    margin-left: 25px;
+    font-family: 'square';
+    color: var(--black);
+    font-weight: lighter; 
+    margin-bottom: 60px; 
+}.leftDownPanel p {
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 25px;
+    font-family: 'Michroma';
+    color: var(--black);
+    font-weight: lighter; 
+    margin-bottom: 10px; 
+}
+
+.leftDownPanel .description {
+    font-size: 2rem;
+    color: lightgray; 
+    letter-spacing: 0.5px; 
+    margin: 5px 0;
+}
+
+.leftDownPanel .sub-description {
+    font-size: 1.5rem; 
+    color: lightgray; 
+    letter-spacing: 0.5px; 
+}
+
+
+
+
+
+/* ------------ RIGHT PANEL ------------- */
+.rightPanel {
+    grid-row: 2/4;
+    grid-column: 3/10;
+    margin: 10px;
+    margin-right: 31px;
+    margin-bottom: 51px;
+    color: black;
+    width: auto;
+    height: auto;
+    background: #ffffff;
+    position: relative;
+    clip-path: polygon(50px 0px, calc(100% - 6px) 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px calc(100% - 1px), 0px 50px);
+    padding: 20px;
+    overflow: hidden;
+    }
+
+    .rightPanelOutline{
+        grid-row: 2/4;
+        grid-column: 3/10;
+        margin: 9px;
+        margin-bottom: 50px;
+        margin-right: 30px;
+        width: auto;
+        height: auto;
+        background: var(--black);
+        clip-path: polygon(50px 0px, calc(100% - 6px) 0px, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0px calc(100% - 1px), 0px 50px);
+        overflow: hidden;
+    }
+
+.plus-log {
+    font-size: 20px;
+    font-family: 'Square'; 
+    font-weight: lighter;
+    margin-top: 10px; 
+    text-align: center;
+    color: var(--black); 
+    top: 0; 
+    margin-bottom: 30px;
+}
+
+.logs p{
+    font-size: 12px;
+    text-align: center;
+    font-family: 'michroma';
+    color: var(--black);
+}
+
+/* inside the box */
+.log-box div { 
+    margin-bottom: 11px; /* Space between each log entry */
+    width: 100%; /* Allow entries to take the full width */
+    padding: 10px; /* Increased padding for individual entries */
+    border: 1px solid #ccc; /* Border for each entry */
+    border-radius: 5px; /* Rounded corners for entries */
+    background-color: #fff; /* Background for entries */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for entries */
+    font-size: 1.5rem; /* Increased font size for log entries */
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .bodyCon {
+        display: grid;
+        grid-template-rows: 100px 2fr 2fr;
+        grid-template-columns: 0px 2fr 1fr;
+    }
+
+    .leftNav {
+        display: none; /* Hide leftNav on smaller screens */
+    }
+
+    .upperNav {
+        grid-row: 1/2;
+        grid-column: 2/10;
+        margin: 10px;
+    }
+
+    .leftUpPanel {
+        grid-row: 2/3;
+        grid-column: 2/2;
+    padding-right: 0px;
+    }
+    .leftUpPanel img{
+        display: none;
+    }
+    .leftUpPanel p{
+        padding-right: 20px;
+    }
+
+    .leftDownPanel {
+        grid-row: 3/4;
+        grid-column: 2/2;
+    }
+
+    .rightPanel {
+        grid-row: 2/4;
+        grid-column: 3/10;
+    }
+    .leftUpPanel h1{
+        font-size: 20px;
+    }.leftUpPanel h2{
+        font-size: 70px;
+    }.leftUpPanel p{
+        font-size: 12px;
+    }
+    .logs p{
+        font-size: 10px;
+    }
+    .leftDownPanel p{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .bodyCon {
+        width: 100vw;
+        height: 190vh;
+        display: grid;
+        grid-template-rows: 80px  260px 30px  300px 30px 330px ;
+        grid-template-columns: 0px 2fr 1fr ;
+    }
+
+    .leftNav {
+        display: none; /* Hide leftNav on smaller screens */
+    }
+    .upperNav{
+        display: none;
+    }
+
+    .upperNav {
+        grid-row: 1/2;
+        grid-column: 1/10;
+        margin: 10px;
+    }
+
+    .leftUpPanel {
+        margin-top: 40px;
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+    
+
+    .leftDownPanel {
+        margin-top: 0px;
+        grid-row: 4/5;
+        grid-column: 1/10;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .leftDownPanelOutline {
+        margin-top: -1px;
+        grid-row: 4/5;
+        grid-column: 1/10;
+        margin-left: 9.5px;
+        margin-right: 9.5px;
+    }
+
+    .rightPanel {
+        grid-row: 5/10;
+        margin-top: -30px;
+        grid-column: 1/10;
+        margin-left: 10px;
+        margin-right: 10px;
+    }.rightPanelOutline {
+        grid-row: 5/10;
+        margin-top: -31px;
+        grid-column: 1/10;
+        margin-left: 9.5px;
+        margin-right: 9.5px;
+    }
+}
